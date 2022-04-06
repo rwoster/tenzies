@@ -1,13 +1,121 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+        "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+        "Droid Sans", "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+    font-family: source-code-pro, Menlo, Monaco, Consolas,
+        "Courier New", monospace;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* TYPOGRAPHY */
+.top--title {
+    color: #2b283a;
+    font-family: "Karla";
+    font-size: 1.625rem;
+    margin: 0;
+}
+.top--description {
+    color: #4a4e74;
+    font-family: "Inter";
+    font-size: 0.8125rem;
+    margin-bottom: 0;
+}
+.die {
+    font-family: "Karla";
+    font-size: 1.3125rem;
+}
+.roll-btn {
+    color: #eee;
+    font-family: "Karla";
+    font-size: 0.8125rem;
+}
+.count-container > small {
+    color: #4a4e74;
+    font-family: "Inter";
+    font-size: 0.8125rem;
+}
+.count {
+    font-size: 2.25em;
+    font-family: "Karla";
+    color: #21cc66;
+}
+
+/* LAYOUT */
+body {
+    background: #0b2434;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    width: 75vw;
+    padding: 3em 0;
+    background-color: #ddd;
+    border-radius: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.top {
+    text-align: center;
+    margin: 0 7em;
+}
+
+.die-container {
+    margin-block: 2.75em;
+    align-self: center;
+    display: grid;
+    grid-template-columns: repeat(5, 50px);
+    grid-template-rows: repeat(2, 50px);
+    gap: 1.21em;
+}
+.die {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.35);
+    cursor: pointer;
+    background: #fff;
+}
+
+.roll-btn {
+    background: #5035ff;
+    box-shadow: 0px 3.2px 7.68px rgba(0, 0, 0, 0.18);
+    border-radius: 5px;
+    width: 90px;
+    height: 35px;
+    align-self: center;
+    cursor: pointer;
+    margin-bottom: 1em;
+}
+
+.roll-btn:active {
+    box-shadow: inset 5px 5px 10px -3px rgba(0, 0, 0, 0.7);
+}
+
+.selected {
+    background-color: #59e391;
+}
+
+.count-container {
+    display: flex;
+    align-items: baseline;
+}
+
+.count {
+    margin-left: 0.25em;
 }
